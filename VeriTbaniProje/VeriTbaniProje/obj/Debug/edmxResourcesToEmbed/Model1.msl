@@ -1,0 +1,211 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Mapping Space="C-S" xmlns="http://schemas.microsoft.com/ado/2009/11/mapping/cs">
+  <EntityContainerMapping StorageEntityContainer="VeriTabaniFasonTakipModelStoreContainer" CdmEntityContainer="VeriTabaniFasonTakipEntities">
+    <EntitySetMapping Name="sysdiagrams">
+      <EntityTypeMapping TypeName="VeriTabaniFasonTakipModel.sysdiagrams">
+        <MappingFragment StoreEntitySet="sysdiagrams">
+          <ScalarProperty Name="name" ColumnName="name" />
+          <ScalarProperty Name="principal_id" ColumnName="principal_id" />
+          <ScalarProperty Name="diagram_id" ColumnName="diagram_id" />
+          <ScalarProperty Name="version" ColumnName="version" />
+          <ScalarProperty Name="definition" ColumnName="definition" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="TblCodeOlustur">
+      <EntityTypeMapping TypeName="VeriTabaniFasonTakipModel.TblCodeOlustur">
+        <MappingFragment StoreEntitySet="TblCodeOlustur">
+          <ScalarProperty Name="Id" ColumnName="Id" />
+          <ScalarProperty Name="CodeNo" ColumnName="CodeNo" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="TblIslemNo">
+      <EntityTypeMapping TypeName="VeriTabaniFasonTakipModel.TblIslemNo">
+        <MappingFragment StoreEntitySet="TblIslemNo">
+          <ScalarProperty Name="Id" ColumnName="Id" />
+          <ScalarProperty Name="IslemNo" ColumnName="IslemNo" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="TblKullanici">
+      <EntityTypeMapping TypeName="VeriTabaniFasonTakipModel.TblKullanici">
+        <MappingFragment StoreEntitySet="TblKullanici">
+          <ScalarProperty Name="Id" ColumnName="Id" />
+          <ScalarProperty Name="KullaniciAdi" ColumnName="KullaniciAdi" />
+          <ScalarProperty Name="Sifre" ColumnName="Sifre" />
+          <ScalarProperty Name="E_mail" ColumnName="E-mail" />
+          <ScalarProperty Name="Adi" ColumnName="Adi" />
+          <ScalarProperty Name="SoyAdi" ColumnName="SoyAdi" />
+          <ScalarProperty Name="Telefon" ColumnName="Telefon" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="TblKumasci">
+      <EntityTypeMapping TypeName="VeriTabaniFasonTakipModel.TblKumasci">
+        <MappingFragment StoreEntitySet="TblKumasci">
+          <ScalarProperty Name="Id" ColumnName="Id" />
+          <ScalarProperty Name="Kumasci" ColumnName="Kumasci" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="TblUrun">
+      <EntityTypeMapping TypeName="VeriTabaniFasonTakipModel.TblUrun">
+        <MappingFragment StoreEntitySet="TblUrun">
+          <ScalarProperty Name="FirmaAdi" ColumnName="FirmaAdi" />
+          <ScalarProperty Name="Kullanici" ColumnName="Kullanici" />
+          <ScalarProperty Name="UrunGrup" ColumnName="UrunGrup" />
+          <ScalarProperty Name="CodeNo" ColumnName="CodeNo" />
+          <ScalarProperty Name="Tarih" ColumnName="Tarih" />
+          <ScalarProperty Name="SatisFiyat" ColumnName="SatisFiyat" />
+          <ScalarProperty Name="Miktar" ColumnName="Miktar" />
+          <ScalarProperty Name="UrunBilgi" ColumnName="UrunBilgi" />
+          <ScalarProperty Name="UrunAdi" ColumnName="UrunAdi" />
+          <ScalarProperty Name="UrunId" ColumnName="UrunId" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="TblGrup">
+      <EntityTypeMapping TypeName="VeriTabaniFasonTakipModel.TblGrup">
+        <MappingFragment StoreEntitySet="TblGrup">
+          <ScalarProperty Name="GrupAdi" ColumnName="GrupAdi" />
+          <ScalarProperty Name="GrupId" ColumnName="GrupId" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="TblSatis">
+      <EntityTypeMapping TypeName="VeriTabaniFasonTakipModel.TblSatis">
+        <MappingFragment StoreEntitySet="TblSatis">
+          <ScalarProperty Name="Kullanici" ColumnName="Kullanici" />
+          <ScalarProperty Name="Tarih" ColumnName="Tarih" />
+          <ScalarProperty Name="Iade" ColumnName="Iade" />
+          <ScalarProperty Name="OdemeSekli" ColumnName="OdemeSekli" />
+          <ScalarProperty Name="Kalan" ColumnName="Kalan" />
+          <ScalarProperty Name="Odenen" ColumnName="Odenen" />
+          <ScalarProperty Name="Toplam" ColumnName="Toplam" />
+          <ScalarProperty Name="SatisFiyat" ColumnName="SatisFiyat" />
+          <ScalarProperty Name="Miktar" ColumnName="Miktar" />
+          <ScalarProperty Name="UrunBilgi" ColumnName="UrunBilgi" />
+          <ScalarProperty Name="CodeNo" ColumnName="CodeNo" />
+          <ScalarProperty Name="UrunAdi" ColumnName="UrunAdi" />
+          <ScalarProperty Name="FirmaAdi" ColumnName="FirmaAdi" />
+          <ScalarProperty Name="IslemNo" ColumnName="IslemNo" />
+          <ScalarProperty Name="SatisId" ColumnName="SatisId" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="TblFirma">
+      <EntityTypeMapping TypeName="VeriTabaniFasonTakipModel.TblFirma">
+        <MappingFragment StoreEntitySet="TblFirma">
+          <ScalarProperty Name="E_Mail" ColumnName="E_Mail" />
+          <ScalarProperty Name="FirmaSahip" ColumnName="FirmaSahip" />
+          <ScalarProperty Name="Adres" ColumnName="Adres" />
+          <ScalarProperty Name="Telefon" ColumnName="Telefon" />
+          <ScalarProperty Name="FirmaAdi" ColumnName="FirmaAdi" />
+          <ScalarProperty Name="FirmaId" ColumnName="FirmaId" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="TblAtolye">
+      <EntityTypeMapping TypeName="VeriTabaniFasonTakipModel.TblAtolye">
+        <MappingFragment StoreEntitySet="TblAtolye">
+          <ScalarProperty Name="AtolyeSahip" ColumnName="AtolyeSahip" />
+          <ScalarProperty Name="AtolyeAdres" ColumnName="AtolyeAdres" />
+          <ScalarProperty Name="AtolyeTel" ColumnName="AtolyeTel" />
+          <ScalarProperty Name="AtolyeAdi" ColumnName="AtolyeAdi" />
+          <ScalarProperty Name="Id" ColumnName="Id" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="TblKesimhane">
+      <EntityTypeMapping TypeName="VeriTabaniFasonTakipModel.TblKesimhane">
+        <MappingFragment StoreEntitySet="TblKesimhane">
+          <ScalarProperty Name="KhSahip" ColumnName="KhSahip" />
+          <ScalarProperty Name="KhAdres" ColumnName="KhAdres" />
+          <ScalarProperty Name="KhTel" ColumnName="KhTel" />
+          <ScalarProperty Name="KhAdi" ColumnName="KhAdi" />
+          <ScalarProperty Name="Id" ColumnName="Id" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="TblYikama">
+      <EntityTypeMapping TypeName="VeriTabaniFasonTakipModel.TblYikama">
+        <MappingFragment StoreEntitySet="TblYikama">
+          <ScalarProperty Name="YikamaSahip" ColumnName="YikamaSahip" />
+          <ScalarProperty Name="YikamaAdres" ColumnName="YikamaAdres" />
+          <ScalarProperty Name="YikamaTel" ColumnName="YikamaTel" />
+          <ScalarProperty Name="YikamaAdi" ColumnName="YikamaAdi" />
+          <ScalarProperty Name="Id" ColumnName="Id" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="TblFasonFirmalar">
+      <EntityTypeMapping TypeName="VeriTabaniFasonTakipModel.TblFasonFirmalar">
+        <MappingFragment StoreEntitySet="TblFasonFirmalar">
+          <ScalarProperty Name="FirmaBilgisi" ColumnName="FirmaBilgisi" />
+          <ScalarProperty Name="Id" ColumnName="Id" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="TblFisNo">
+      <EntityTypeMapping TypeName="VeriTabaniFasonTakipModel.TblFisNo">
+        <MappingFragment StoreEntitySet="TblFisNo">
+          <ScalarProperty Name="FisNo" ColumnName="FisNo" />
+          <ScalarProperty Name="Id" ColumnName="Id" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="TblUrunTakip">
+      <EntityTypeMapping TypeName="VeriTabaniFasonTakipModel.TblUrunTakip">
+        <MappingFragment StoreEntitySet="TblUrunTakip">
+          <ScalarProperty Name="FisNo" ColumnName="FisNo" />
+          <ScalarProperty Name="FirmaAdi" ColumnName="FirmaAdi" />
+          <ScalarProperty Name="Tarih" ColumnName="Tarih" />
+          <ScalarProperty Name="TeslimAlanAdi" ColumnName="TeslimAlanAdi" />
+          <ScalarProperty Name="KumasMetre" ColumnName="KumasMetre" />
+          <ScalarProperty Name="Kumasci" ColumnName="Kumasci" />
+          <ScalarProperty Name="Metraj" ColumnName="Metraj" />
+          <ScalarProperty Name="KesimAdet" ColumnName="KesimAdet" />
+          <ScalarProperty Name="FirmaBilgisi" ColumnName="FirmaBilgisi" />
+          <ScalarProperty Name="Cinsi" ColumnName="Cinsi" />
+          <ScalarProperty Name="Model" ColumnName="Model" />
+          <ScalarProperty Name="id" ColumnName="id" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="TblAtolyeTakip">
+      <EntityTypeMapping TypeName="VeriTabaniFasonTakipModel.TblAtolyeTakip">
+        <MappingFragment StoreEntitySet="TblAtolyeTakip">
+          <ScalarProperty Name="FisNo" ColumnName="FisNo" />
+          <ScalarProperty Name="Tarih" ColumnName="Tarih" />
+          <ScalarProperty Name="TeslimAlanAdi" ColumnName="TeslimAlanAdi" />
+          <ScalarProperty Name="KumasAdi" ColumnName="KumasAdi" />
+          <ScalarProperty Name="Kumasci" ColumnName="Kumasci" />
+          <ScalarProperty Name="KesimAdet" ColumnName="KesimAdet" />
+          <ScalarProperty Name="Cinsi" ColumnName="Cinsi" />
+          <ScalarProperty Name="Model" ColumnName="Model" />
+          <ScalarProperty Name="FirmaAdi" ColumnName="FirmaAdi" />
+          <ScalarProperty Name="FirmaBilgisi" ColumnName="FirmaBilgisi" />
+          <ScalarProperty Name="AtolyeId" ColumnName="AtolyeId" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="TblYikamaTakip">
+      <EntityTypeMapping TypeName="VeriTabaniFasonTakipModel.TblYikamaTakip">
+        <MappingFragment StoreEntitySet="TblYikamaTakip">
+          <ScalarProperty Name="FisNo" ColumnName="FisNo" />
+          <ScalarProperty Name="Tarih" ColumnName="Tarih" />
+          <ScalarProperty Name="TeslimAlanAdi" ColumnName="TeslimAlanAdi" />
+          <ScalarProperty Name="KumasAdi" ColumnName="KumasAdi" />
+          <ScalarProperty Name="Kumasci" ColumnName="Kumasci" />
+          <ScalarProperty Name="KesimAdet" ColumnName="KesimAdet" />
+          <ScalarProperty Name="Cinsi" ColumnName="Cinsi" />
+          <ScalarProperty Name="Model" ColumnName="Model" />
+          <ScalarProperty Name="FirmaAdi" ColumnName="FirmaAdi" />
+          <ScalarProperty Name="FirmaBilgisi" ColumnName="FirmaBilgisi" />
+          <ScalarProperty Name="YikamaId" ColumnName="YikamaId" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+  </EntityContainerMapping>
+</Mapping>

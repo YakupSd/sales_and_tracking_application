@@ -1,0 +1,28 @@
+<?xml version="1.0" encoding="utf-8"?>
+<edmx:Edmx Version="3.0" xmlns:edmx="http://schemas.microsoft.com/ado/2009/11/edmx">
+ <!-- EF Designer content (DO NOT EDIT MANUALLY BELOW HERE) -->
+  <edmx:Designer xmlns="http://schemas.microsoft.com/ado/2009/11/edmx">
+    <!-- Diagram content (shape and connector positions) -->
+    <edmx:Diagrams>
+      <Diagram DiagramId="3d26c3352f4a407b9a05932105c92095" Name="Diagram1">
+        <EntityTypeShape EntityType="VeriTabaniFasonTakipModel.sysdiagrams" Width="1.5" PointX="0.75" PointY="0.75" IsExpanded="true" />
+        <EntityTypeShape EntityType="VeriTabaniFasonTakipModel.TblCodeOlustur" Width="1.5" PointX="0.5" PointY="3.75" IsExpanded="true" />
+        <EntityTypeShape EntityType="VeriTabaniFasonTakipModel.TblIslemNo" Width="1.5" PointX="2.125" PointY="3.75" IsExpanded="true" />
+        <EntityTypeShape EntityType="VeriTabaniFasonTakipModel.TblKullanici" Width="1.5" PointX="2.125" PointY="5.375" IsExpanded="true" />
+        <EntityTypeShape EntityType="VeriTabaniFasonTakipModel.TblKumasci" Width="1.5" PointX="3.875" PointY="5.25" IsExpanded="true" />
+        <EntityTypeShape EntityType="VeriTabaniFasonTakipModel.TblUrun" Width="1.5" PointX="5.625" PointY="5.875" />
+        <EntityTypeShape EntityType="VeriTabaniFasonTakipModel.TblGrup" Width="1.5" PointX="3.875" PointY="3.75" />
+        <EntityTypeShape EntityType="VeriTabaniFasonTakipModel.TblSatis" Width="1.5" PointX="7.25" PointY="0.75" />
+        <EntityTypeShape EntityType="VeriTabaniFasonTakipModel.TblFirma" Width="1.5" PointX="8.875" PointY="0.75" />
+        <EntityTypeShape EntityType="VeriTabaniFasonTakipModel.TblAtolye" Width="1.5" PointX="2.375" PointY="0.75" />
+        <EntityTypeShape EntityType="VeriTabaniFasonTakipModel.TblKesimhane" Width="1.5" PointX="4" PointY="0.75" />
+        <EntityTypeShape EntityType="VeriTabaniFasonTakipModel.TblYikama" Width="1.5" PointX="0.5" PointY="5.375" />
+        <EntityTypeShape EntityType="VeriTabaniFasonTakipModel.TblFasonFirmalar" Width="1.5" PointX="5.625" PointY="4.25" />
+        <EntityTypeShape EntityType="VeriTabaniFasonTakipModel.TblFisNo" Width="1.5" PointX="3.875" PointY="6.75" />
+        <EntityTypeShape EntityType="VeriTabaniFasonTakipModel.TblUrunTakip" Width="1.5" PointX="5.625" PointY="0.75" />
+        <EntityTypeShape EntityType="VeriTabaniFasonTakipModel.TblAtolyeTakip" Width="1.5" PointX="0.75" PointY="8.75" />
+        <EntityTypeShape EntityType="VeriTabaniFasonTakipModel.TblYikamaTakip" Width="1.5" PointX="8.75" PointY="5.75" />
+      </Diagram>
+    </edmx:Diagrams>
+  </edmx:Designer>
+</edmx:Edmx>

@@ -1,0 +1,211 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Schema Namespace="VeriTabaniFasonTakipModel" Alias="Self" annotation:UseStrongSpatialTypes="false" xmlns:annotation="http://schemas.microsoft.com/ado/2009/02/edm/annotation" xmlns:customannotation="http://schemas.microsoft.com/ado/2013/11/edm/customannotation" xmlns="http://schemas.microsoft.com/ado/2009/11/edm">
+  <EntityType Name="sysdiagrams">
+    <Key>
+      <PropertyRef Name="diagram_id" />
+    </Key>
+    <Property Name="name" Type="String" MaxLength="128" FixedLength="false" Unicode="true" Nullable="false" />
+    <Property Name="principal_id" Type="Int32" Nullable="false" />
+    <Property Name="diagram_id" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="version" Type="Int32" />
+    <Property Name="definition" Type="Binary" MaxLength="Max" FixedLength="false" />
+  </EntityType>
+  <EntityType Name="TblCodeOlustur">
+    <Key>
+      <PropertyRef Name="Id" />
+    </Key>
+    <Property Name="Id" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="CodeNo" Type="Int32" />
+  </EntityType>
+  <EntityType Name="TblIslemNo">
+    <Key>
+      <PropertyRef Name="Id" />
+    </Key>
+    <Property Name="Id" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="IslemNo" Type="Int32" />
+  </EntityType>
+  <EntityType Name="TblKullanici">
+    <Key>
+      <PropertyRef Name="Id" />
+    </Key>
+    <Property Name="Id" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="KullaniciAdi" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+    <Property Name="Sifre" Type="String" MaxLength="20" FixedLength="false" Unicode="true" />
+    <Property Name="E_mail" Type="String" MaxLength="20" FixedLength="false" Unicode="true" />
+    <Property Name="Adi" Type="String" MaxLength="25" FixedLength="false" Unicode="true" />
+    <Property Name="SoyAdi" Type="String" MaxLength="25" FixedLength="false" Unicode="true" />
+    <Property Name="Telefon" Type="String" MaxLength="25" FixedLength="false" Unicode="true" />
+  </EntityType>
+  <EntityType Name="TblKumasci">
+    <Key>
+      <PropertyRef Name="Id" />
+    </Key>
+    <Property Name="Id" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="Kumasci" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+  </EntityType>
+  <EntityContainer Name="VeriTabaniFasonTakipEntities" annotation:LazyLoadingEnabled="true">
+    <EntitySet Name="sysdiagrams" EntityType="Self.sysdiagrams" />
+    <EntitySet Name="TblCodeOlustur" EntityType="Self.TblCodeOlustur" />
+    <EntitySet Name="TblIslemNo" EntityType="Self.TblIslemNo" />
+    <EntitySet Name="TblKullanici" EntityType="Self.TblKullanici" />
+    <EntitySet Name="TblKumasci" EntityType="Self.TblKumasci" />
+    <EntitySet Name="TblUrun" EntityType="VeriTabaniFasonTakipModel.TblUrun" />
+    <EntitySet Name="TblGrup" EntityType="VeriTabaniFasonTakipModel.TblGrup" />
+    <EntitySet Name="TblSatis" EntityType="VeriTabaniFasonTakipModel.TblSatis" />
+    <EntitySet Name="TblFirma" EntityType="VeriTabaniFasonTakipModel.TblFirma" />
+    <EntitySet Name="TblAtolye" EntityType="VeriTabaniFasonTakipModel.TblAtolye" />
+    <EntitySet Name="TblKesimhane" EntityType="VeriTabaniFasonTakipModel.TblKesimhane" />
+    <EntitySet Name="TblYikama" EntityType="VeriTabaniFasonTakipModel.TblYikama" />
+    <EntitySet Name="TblFasonFirmalar" EntityType="VeriTabaniFasonTakipModel.TblFasonFirmalar" />
+    <EntitySet Name="TblFisNo" EntityType="VeriTabaniFasonTakipModel.TblFisNo" />
+    <EntitySet Name="TblUrunTakip" EntityType="VeriTabaniFasonTakipModel.TblUrunTakip" />
+    <EntitySet Name="TblAtolyeTakip" EntityType="VeriTabaniFasonTakipModel.TblAtolyeTakip" />
+    <EntitySet Name="TblYikamaTakip" EntityType="VeriTabaniFasonTakipModel.TblYikamaTakip" />
+  </EntityContainer>
+  <EntityType Name="TblUrun">
+    <Key>
+      <PropertyRef Name="UrunId" />
+    </Key>
+    <Property Name="UrunId" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="UrunAdi" Type="String" MaxLength="250" FixedLength="false" Unicode="true" />
+    <Property Name="UrunBilgi" Type="String" MaxLength="250" FixedLength="false" Unicode="true" />
+    <Property Name="Miktar" Type="Int32" />
+    <Property Name="SatisFiyat" Type="Double" />
+    <Property Name="Tarih" Type="DateTime" Precision="0" />
+    <Property Name="CodeNo" Type="String" MaxLength="25" FixedLength="false" Unicode="true" />
+    <Property Name="UrunGrup" Type="String" MaxLength="250" FixedLength="false" Unicode="true" />
+    <Property Name="Kullanici" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+    <Property Name="FirmaAdi" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+  </EntityType>
+  <EntityType Name="TblGrup">
+    <Key>
+      <PropertyRef Name="GrupId" />
+    </Key>
+    <Property Name="GrupId" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="GrupAdi" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+  </EntityType>
+  <EntityType Name="TblSatis">
+    <Key>
+      <PropertyRef Name="SatisId" />
+    </Key>
+    <Property Name="SatisId" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="IslemNo" Type="Int32" />
+    <Property Name="FirmaAdi" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+    <Property Name="UrunAdi" Type="String" MaxLength="250" FixedLength="false" Unicode="true" />
+    <Property Name="CodeNo" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+    <Property Name="UrunBilgi" Type="String" MaxLength="250" FixedLength="false" Unicode="true" />
+    <Property Name="Miktar" Type="Int32" />
+    <Property Name="SatisFiyat" Type="Double" />
+    <Property Name="Toplam" Type="Double" />
+    <Property Name="Odenen" Type="Double" />
+    <Property Name="Kalan" Type="Double" />
+    <Property Name="OdemeSekli" Type="String" MaxLength="20" FixedLength="false" Unicode="true" />
+    <Property Name="Iade" Type="Boolean" />
+    <Property Name="Tarih" Type="DateTime" Precision="0" />
+    <Property Name="Kullanici" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+  </EntityType>
+  <EntityType Name="TblFirma">
+    <Key>
+      <PropertyRef Name="FirmaId" />
+    </Key>
+    <Property Name="FirmaId" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="FirmaAdi" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+    <Property Name="Telefon" Type="String" MaxLength="25" FixedLength="false" Unicode="true" />
+    <Property Name="Adres" Type="String" MaxLength="250" FixedLength="false" Unicode="true" />
+    <Property Name="FirmaSahip" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+    <Property Name="E_Mail" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+  </EntityType>
+  <EntityType Name="TblAtolye">
+    <Key>
+      <PropertyRef Name="Id" />
+    </Key>
+    <Property Name="Id" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="AtolyeAdi" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+    <Property Name="AtolyeTel" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+    <Property Name="AtolyeAdres" Type="String" MaxLength="250" FixedLength="false" Unicode="true" />
+    <Property Name="AtolyeSahip" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+  </EntityType>
+  <EntityType Name="TblKesimhane">
+    <Key>
+      <PropertyRef Name="Id" />
+    </Key>
+    <Property Name="Id" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="KhAdi" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+    <Property Name="KhTel" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+    <Property Name="KhAdres" Type="String" MaxLength="150" FixedLength="false" Unicode="true" />
+    <Property Name="KhSahip" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+  </EntityType>
+  <EntityType Name="TblYikama">
+    <Key>
+      <PropertyRef Name="Id" />
+    </Key>
+    <Property Name="Id" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="YikamaAdi" Type="String" MaxLength="150" FixedLength="false" Unicode="true" />
+    <Property Name="YikamaTel" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+    <Property Name="YikamaAdres" Type="String" MaxLength="250" FixedLength="false" Unicode="true" />
+    <Property Name="YikamaSahip" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+  </EntityType>
+  <EntityType Name="TblFasonFirmalar">
+    <Key>
+      <PropertyRef Name="Id" />
+    </Key>
+    <Property Name="Id" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="FirmaBilgisi" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+  </EntityType>
+  <EntityType Name="TblFisNo">
+    <Key>
+      <PropertyRef Name="Id" />
+    </Key>
+    <Property Name="Id" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="FisNo" Type="Int32" />
+  </EntityType>
+  <EntityType Name="TblUrunTakip">
+    <Key>
+      <PropertyRef Name="id" />
+    </Key>
+    <Property Name="id" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="Model" Type="String" MaxLength="25" FixedLength="false" Unicode="true" />
+    <Property Name="Cinsi" Type="String" MaxLength="150" FixedLength="false" Unicode="true" />
+    <Property Name="FirmaBilgisi" Type="String" MaxLength="125" FixedLength="false" Unicode="true" />
+    <Property Name="KesimAdet" Type="Int32" />
+    <Property Name="Metraj" Type="Double" />
+    <Property Name="Kumasci" Type="String" MaxLength="125" FixedLength="false" Unicode="true" />
+    <Property Name="KumasMetre" Type="Double" />
+    <Property Name="TeslimAlanAdi" Type="String" MaxLength="150" FixedLength="false" Unicode="true" />
+    <Property Name="Tarih" Type="DateTime" Precision="0" />
+    <Property Name="FirmaAdi" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+    <Property Name="FisNo" Type="String" MaxLength="20" FixedLength="false" Unicode="true" />
+  </EntityType>
+  <EntityType Name="TblAtolyeTakip">
+    <Key>
+      <PropertyRef Name="AtolyeId" />
+    </Key>
+    <Property Name="AtolyeId" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="FirmaBilgisi" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+    <Property Name="FirmaAdi" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+    <Property Name="Model" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+    <Property Name="Cinsi" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+    <Property Name="KesimAdet" Type="Int32" />
+    <Property Name="Kumasci" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+    <Property Name="KumasAdi" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+    <Property Name="TeslimAlanAdi" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+    <Property Name="Tarih" Type="DateTime" Precision="0" />
+    <Property Name="FisNo" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+  </EntityType>
+  <EntityType Name="TblYikamaTakip">
+    <Key>
+      <PropertyRef Name="YikamaId" />
+    </Key>
+    <Property Name="YikamaId" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="FirmaBilgisi" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+    <Property Name="FirmaAdi" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+    <Property Name="Model" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+    <Property Name="Cinsi" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+    <Property Name="KesimAdet" Type="Int32" />
+    <Property Name="Kumasci" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+    <Property Name="KumasAdi" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+    <Property Name="TeslimAlanAdi" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+    <Property Name="Tarih" Type="DateTime" Precision="0" />
+    <Property Name="FisNo" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+  </EntityType>
+</Schema>

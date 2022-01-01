@@ -1,0 +1,211 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Schema Namespace="VeriTabaniFasonTakipModel.Store" Provider="System.Data.SqlClient" ProviderManifestToken="2012" Alias="Self" xmlns:store="http://schemas.microsoft.com/ado/2007/12/edm/EntityStoreSchemaGenerator" xmlns:customannotation="http://schemas.microsoft.com/ado/2013/11/edm/customannotation" xmlns="http://schemas.microsoft.com/ado/2009/11/edm/ssdl">
+  <EntityType Name="sysdiagrams">
+    <Key>
+      <PropertyRef Name="diagram_id" />
+    </Key>
+    <Property Name="name" Type="nvarchar" MaxLength="128" Nullable="false" />
+    <Property Name="principal_id" Type="int" Nullable="false" />
+    <Property Name="diagram_id" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="version" Type="int" />
+    <Property Name="definition" Type="varbinary(max)" />
+  </EntityType>
+  <EntityType Name="TblAtolye">
+    <Key>
+      <PropertyRef Name="Id" />
+    </Key>
+    <Property Name="Id" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="AtolyeAdi" Type="nvarchar" MaxLength="50" />
+    <Property Name="AtolyeTel" Type="nvarchar" MaxLength="50" />
+    <Property Name="AtolyeAdres" Type="nvarchar" MaxLength="250" />
+    <Property Name="AtolyeSahip" Type="nvarchar" MaxLength="50" />
+  </EntityType>
+  <EntityType Name="TblAtolyeTakip">
+    <Key>
+      <PropertyRef Name="AtolyeId" />
+    </Key>
+    <Property Name="AtolyeId" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="FirmaBilgisi" Type="nvarchar" MaxLength="50" />
+    <Property Name="FirmaAdi" Type="nvarchar" MaxLength="50" />
+    <Property Name="Model" Type="nvarchar" MaxLength="50" />
+    <Property Name="Cinsi" Type="nvarchar" MaxLength="50" />
+    <Property Name="KesimAdet" Type="int" />
+    <Property Name="Kumasci" Type="nvarchar" MaxLength="50" />
+    <Property Name="KumasAdi" Type="nvarchar" MaxLength="50" />
+    <Property Name="TeslimAlanAdi" Type="nvarchar" MaxLength="50" />
+    <Property Name="Tarih" Type="date" />
+    <Property Name="FisNo" Type="nvarchar" MaxLength="50" />
+  </EntityType>
+  <EntityType Name="TblCodeOlustur">
+    <Key>
+      <PropertyRef Name="Id" />
+    </Key>
+    <Property Name="Id" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="CodeNo" Type="int" />
+  </EntityType>
+  <EntityType Name="TblFasonFirmalar">
+    <Key>
+      <PropertyRef Name="Id" />
+    </Key>
+    <Property Name="Id" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="FirmaBilgisi" Type="nvarchar" MaxLength="50" />
+  </EntityType>
+  <EntityType Name="TblFirma">
+    <Key>
+      <PropertyRef Name="FirmaId" />
+    </Key>
+    <Property Name="FirmaId" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="FirmaAdi" Type="nvarchar" MaxLength="50" />
+    <Property Name="Telefon" Type="nvarchar" MaxLength="25" />
+    <Property Name="Adres" Type="nvarchar" MaxLength="250" />
+    <Property Name="FirmaSahip" Type="nvarchar" MaxLength="50" />
+    <Property Name="E_Mail" Type="nvarchar" MaxLength="50" />
+  </EntityType>
+  <EntityType Name="TblFisNo">
+    <Key>
+      <PropertyRef Name="Id" />
+    </Key>
+    <Property Name="Id" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="FisNo" Type="int" />
+  </EntityType>
+  <EntityType Name="TblGrup">
+    <Key>
+      <PropertyRef Name="GrupId" />
+    </Key>
+    <Property Name="GrupId" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="GrupAdi" Type="nvarchar" MaxLength="50" />
+  </EntityType>
+  <EntityType Name="TblIslemNo">
+    <Key>
+      <PropertyRef Name="Id" />
+    </Key>
+    <Property Name="Id" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="IslemNo" Type="int" />
+  </EntityType>
+  <EntityType Name="TblKesimhane">
+    <Key>
+      <PropertyRef Name="Id" />
+    </Key>
+    <Property Name="Id" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="KhAdi" Type="nvarchar" MaxLength="50" />
+    <Property Name="KhTel" Type="nvarchar" MaxLength="50" />
+    <Property Name="KhAdres" Type="nvarchar" MaxLength="150" />
+    <Property Name="KhSahip" Type="nvarchar" MaxLength="50" />
+  </EntityType>
+  <EntityType Name="TblKullanici">
+    <Key>
+      <PropertyRef Name="Id" />
+    </Key>
+    <Property Name="Id" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="KullaniciAdi" Type="nvarchar" MaxLength="50" />
+    <Property Name="Sifre" Type="nvarchar" MaxLength="20" />
+    <Property Name="E-mail" Type="nvarchar" MaxLength="20" />
+    <Property Name="Adi" Type="nvarchar" MaxLength="25" />
+    <Property Name="SoyAdi" Type="nvarchar" MaxLength="25" />
+    <Property Name="Telefon" Type="nvarchar" MaxLength="25" />
+  </EntityType>
+  <EntityType Name="TblKumasci">
+    <Key>
+      <PropertyRef Name="Id" />
+    </Key>
+    <Property Name="Id" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="Kumasci" Type="nvarchar" MaxLength="50" />
+  </EntityType>
+  <EntityType Name="TblSatis">
+    <Key>
+      <PropertyRef Name="SatisId" />
+    </Key>
+    <Property Name="SatisId" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="IslemNo" Type="int" />
+    <Property Name="FirmaAdi" Type="nvarchar" MaxLength="50" />
+    <Property Name="UrunAdi" Type="nvarchar" MaxLength="250" />
+    <Property Name="CodeNo" Type="nvarchar" MaxLength="50" />
+    <Property Name="UrunBilgi" Type="nvarchar" MaxLength="250" />
+    <Property Name="Miktar" Type="int" />
+    <Property Name="SatisFiyat" Type="float" />
+    <Property Name="Toplam" Type="float" />
+    <Property Name="Odenen" Type="float" />
+    <Property Name="Kalan" Type="float" />
+    <Property Name="OdemeSekli" Type="nvarchar" MaxLength="20" />
+    <Property Name="Iade" Type="bit" />
+    <Property Name="Tarih" Type="date" />
+    <Property Name="Kullanici" Type="nvarchar" MaxLength="50" />
+  </EntityType>
+  <EntityType Name="TblUrun">
+    <Key>
+      <PropertyRef Name="UrunId" />
+    </Key>
+    <Property Name="UrunId" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="UrunAdi" Type="nvarchar" MaxLength="250" />
+    <Property Name="UrunBilgi" Type="nvarchar" MaxLength="250" />
+    <Property Name="Miktar" Type="int" />
+    <Property Name="SatisFiyat" Type="float" />
+    <Property Name="Tarih" Type="date" />
+    <Property Name="CodeNo" Type="nvarchar" MaxLength="25" />
+    <Property Name="UrunGrup" Type="nvarchar" MaxLength="250" />
+    <Property Name="Kullanici" Type="nvarchar" MaxLength="50" />
+    <Property Name="FirmaAdi" Type="nvarchar" MaxLength="50" />
+  </EntityType>
+  <EntityType Name="TblUrunTakip">
+    <Key>
+      <PropertyRef Name="id" />
+    </Key>
+    <Property Name="id" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="Model" Type="nvarchar" MaxLength="25" />
+    <Property Name="Cinsi" Type="nvarchar" MaxLength="150" />
+    <Property Name="FirmaBilgisi" Type="nvarchar" MaxLength="125" />
+    <Property Name="KesimAdet" Type="int" />
+    <Property Name="Metraj" Type="float" />
+    <Property Name="Kumasci" Type="nvarchar" MaxLength="125" />
+    <Property Name="KumasMetre" Type="float" />
+    <Property Name="TeslimAlanAdi" Type="nvarchar" MaxLength="150" />
+    <Property Name="Tarih" Type="date" />
+    <Property Name="FirmaAdi" Type="nvarchar" MaxLength="50" />
+    <Property Name="FisNo" Type="nvarchar" MaxLength="20" />
+  </EntityType>
+  <EntityType Name="TblYikama">
+    <Key>
+      <PropertyRef Name="Id" />
+    </Key>
+    <Property Name="Id" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="YikamaAdi" Type="nvarchar" MaxLength="150" />
+    <Property Name="YikamaTel" Type="nvarchar" MaxLength="50" />
+    <Property Name="YikamaAdres" Type="nvarchar" MaxLength="250" />
+    <Property Name="YikamaSahip" Type="nvarchar" MaxLength="50" />
+  </EntityType>
+  <EntityType Name="TblYikamaTakip">
+    <Key>
+      <PropertyRef Name="YikamaId" />
+    </Key>
+    <Property Name="YikamaId" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="FirmaBilgisi" Type="nvarchar" MaxLength="50" />
+    <Property Name="FirmaAdi" Type="nvarchar" MaxLength="50" />
+    <Property Name="Model" Type="nvarchar" MaxLength="50" />
+    <Property Name="Cinsi" Type="nvarchar" MaxLength="50" />
+    <Property Name="KesimAdet" Type="int" />
+    <Property Name="Kumasci" Type="nvarchar" MaxLength="50" />
+    <Property Name="KumasAdi" Type="nvarchar" MaxLength="50" />
+    <Property Name="TeslimAlanAdi" Type="nvarchar" MaxLength="50" />
+    <Property Name="Tarih" Type="date" />
+    <Property Name="FisNo" Type="nvarchar" MaxLength="50" />
+  </EntityType>
+  <EntityContainer Name="VeriTabaniFasonTakipModelStoreContainer">
+    <EntitySet Name="sysdiagrams" EntityType="Self.sysdiagrams" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="TblAtolye" EntityType="Self.TblAtolye" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="TblAtolyeTakip" EntityType="Self.TblAtolyeTakip" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="TblCodeOlustur" EntityType="Self.TblCodeOlustur" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="TblFasonFirmalar" EntityType="Self.TblFasonFirmalar" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="TblFirma" EntityType="Self.TblFirma" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="TblFisNo" EntityType="Self.TblFisNo" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="TblGrup" EntityType="Self.TblGrup" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="TblIslemNo" EntityType="Self.TblIslemNo" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="TblKesimhane" EntityType="Self.TblKesimhane" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="TblKullanici" EntityType="Self.TblKullanici" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="TblKumasci" EntityType="Self.TblKumasci" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="TblSatis" EntityType="Self.TblSatis" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="TblUrun" EntityType="Self.TblUrun" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="TblUrunTakip" EntityType="Self.TblUrunTakip" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="TblYikama" EntityType="Self.TblYikama" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="TblYikamaTakip" EntityType="Self.TblYikamaTakip" Schema="dbo" store:Type="Tables" />
+  </EntityContainer>
+</Schema>
