@@ -1,0 +1,2 @@
+# sales_and_tracking_application
+Satış uygulaması
